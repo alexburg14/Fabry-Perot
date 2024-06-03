@@ -1,5 +1,6 @@
 import csv
 def read_csv(filename):
+    count = []
     # Initialize empty arrays for each column
     columns = []
 
@@ -11,10 +12,12 @@ def read_csv(filename):
         # Initialize empty arrays for each column
         for _ in range(len(headers)):
             columns.append([])
+            count.append([])
 
         # Read each row and store values into respective columns
         for row in csv_reader:
             for i, value in enumerate(row):
+                count[i] = 0
                 # Replace commas inside numbers with dots and remove apostrophes
                 cleaned_value = value.replace(',', '.').replace("'","")
 
@@ -23,6 +26,6 @@ def read_csv(filename):
                     columns[i].append(float(cleaned_value))
                 except ValueError:
                     # If conversion fails, just append the cleaned value as is
-                    pass
+                    count[i] += 1
 
     return columns
