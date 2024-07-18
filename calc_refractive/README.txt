@@ -1,0 +1,2 @@
+Hier ist die Idee, die Raumtemperatur Daten zu fitten um den wellenlängeabhängigen Brechungsindex rauszufinden, weil man die Länge kennt.
+Danach wurde die gefittete Brechungsindexfunktino benutzt, um die Längenänerungen bei den verschiedenen Temperaturen zu bekommen.
